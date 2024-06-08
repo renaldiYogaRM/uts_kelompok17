@@ -25,8 +25,13 @@ class HomeSplash extends StatelessWidget {
                   ),
                 ),
               ),
+              const SizedBox(height: 20),
+              Image.asset(
+                'assets/logo_umkt.png', //
+                width: 200, // mengatur lebar
+                height: 200, // mengatur tinggi
+              ),
               const SizedBox(height: 20,),
-
               ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => HomePage()));

@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
-
 import 'package:news_flutter/model/model_news.dart';
 import 'package:news_flutter/network/network_services.dart';
 import 'package:news_flutter/page_detail/detail_page.dart';
 import 'package:news_flutter/utils/tools.dart';
 
 class NewsPage extends StatelessWidget {
-
+  
   final String kategori;
+  final String searchQuery;
 
-  const NewsPage({super.key, required this.kategori});
+  const NewsPage({Key? key, required this.kategori, this.searchQuery = ""}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

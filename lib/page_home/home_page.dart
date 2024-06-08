@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
 import 'package:news_flutter/page_news/news_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -75,17 +74,17 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor:Color.fromARGB(249, 238, 238, 238),
       appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(249, 238, 238, 238),
           elevation: 0,
           title: Row(
             children: [
-              Lottie.asset(
-                'assets/raw/news.json',
-                width: 60,
-                height: 60,
-                fit: BoxFit.fill,
+              Image.asset(
+                'assets/logo_umkt.png',
+                width: 40,
+                height: 40,
+                //fit: BoxFit.fill,
               ),
               const SizedBox(
                 width: 20,
@@ -107,8 +106,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             quarterTurns: 1,
             child: TabBar(
               controller: tabController,
-              indicatorColor: Colors.grey,
-              labelColor: const Color(0xffe1b859),
+              indicatorColor: Color.fromARGB(255, 21, 0, 255),
+              labelColor: Color.fromARGB(255, 21, 0, 255),
               unselectedLabelColor: Colors.grey,
               tabs: [
                 getItem(
