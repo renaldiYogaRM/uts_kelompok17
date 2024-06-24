@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage>
           {
             setState(() {
               strKategori = 'terbaru';
-              strTitle = "Berita Terkini - ANTARA News";
+              strTitle = "Berita Terkini";
             });
             break;
           }
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage>
           {
             setState(() {
               strKategori = 'politik';
-              strTitle = "Politik - ANTARA News";
+              strTitle = "Politik";
             });
             break;
           }
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage>
           {
             setState(() {
               strKategori = 'hukum';
-              strTitle = "Hukum - ANTARA News";
+              strTitle = "Hukum";
             });
             break;
           }
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage>
           {
             setState(() {
               strKategori = 'ekonomi';
-              strTitle = "Ekonomi - ANTARA News";
+              strTitle = "Ekonomi";
             });
             break;
           }
@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage>
           {
             setState(() {
               strKategori = 'bola';
-              strTitle = "Sepakbola - ANTARA News";
+              strTitle = "Sepakbola";
             });
             break;
           }
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage>
           {
             setState(() {
               strKategori = 'humaniora';
-              strTitle = "Humaniora - ANTARA News";
+              strTitle = "Humaniora";
             });
             break;
           }
@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage>
                   ),
                   text: const Text(
                     textAlign: TextAlign.center,
-                    "Gaya\nHidup",
+                    "Politik",
                   ),
                 ),
                 getItem(
@@ -133,7 +133,7 @@ class _HomePageState extends State<HomePage>
                     Icons.computer,
                   ),
                   text: const Text(
-                    "Teknologi",
+                    "Hukum",
                   ),
                 ),
                 getItem(
@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage>
                     Icons.business_sharp,
                   ),
                   text: const Text(
-                    "Bisnis",
+                    "Ekonomi",
                   ),
                 ),
                 getItem(
@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage>
                     Icons.sports_baseball_outlined,
                   ),
                   text: const Text(
-                    "Olahraga",
+                    "Sepak Bola",
                   ),
                 ),
                 getItem(
@@ -157,7 +157,7 @@ class _HomePageState extends State<HomePage>
                     Icons.motorcycle_sharp,
                   ),
                   text: const Text(
-                    "Otomotif",
+                    "Humaniora",
                   ),
                 ),
               ],
