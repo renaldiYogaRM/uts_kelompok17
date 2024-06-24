@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-  String strKategori = 'terbaru', strTitle = "Berita Terkini - ANTARA News";
+  String strKategori = 'terbaru', strTitle = "Berita Terkini";
   TabController? tabController;
 
   @override
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage>
               tabs: [
                 getItem(
                   icon: const Icon(
-                    Icons.local_fire_department_sharp,
+                    Icons.cottage_outlined,
                   ),
                   text: const Text(
                     textAlign: TextAlign.center,
@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage>
                 ),
                 getItem(
                   icon: const Icon(
-                    Icons.style_outlined,
+                    Icons.assignment_ind_outlined,
                   ),
                   text: const Text(
                     textAlign: TextAlign.center,
@@ -130,7 +130,7 @@ class _HomePageState extends State<HomePage>
                 ),
                 getItem(
                   icon: const Icon(
-                    Icons.computer,
+                    Icons.account_balance_rounded,
                   ),
                   text: const Text(
                     "Hukum",
@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage>
                 ),
                 getItem(
                   icon: const Icon(
-                    Icons.business_sharp,
+                    Icons.attach_money_outlined,
                   ),
                   text: const Text(
                     "Ekonomi",
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage>
                 ),
                 getItem(
                   icon: const Icon(
-                    Icons.sports_baseball_outlined,
+                    Icons.sports_soccer_outlined,
                   ),
                   text: const Text(
                     "Sepak Bola",
@@ -154,7 +154,7 @@ class _HomePageState extends State<HomePage>
                 ),
                 getItem(
                   icon: const Icon(
-                    Icons.motorcycle_sharp,
+                    Icons.yard_outlined,
                   ),
                   text: const Text(
                     "Humaniora",
