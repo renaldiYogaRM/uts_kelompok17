@@ -5,11 +5,11 @@ import 'package:news_flutter/page_detail/detail_page.dart';
 import 'package:news_flutter/utils/tools.dart';
 
 class NewsPage extends StatelessWidget {
-  
   final String kategori;
   final String searchQuery;
 
-  const NewsPage({Key? key, required this.kategori, this.searchQuery = ""}) : super(key: key);
+  const NewsPage({Key? key, required this.kategori, this.searchQuery = ""})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +21,17 @@ class NewsPage extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
               child: CircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xffe1b859))
-              ),
+                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xffe1b859))),
             );
           }
 
           if (snapshot.hasError) {
             return const Center(
-              child: Text("Ups, Error!", style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold)
-              ),
+              child: Text("Ups, Error!",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold)),
             );
           }
 
@@ -46,33 +45,30 @@ class NewsPage extends StatelessWidget {
                   String strTitleWeb = data.title.toString();
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DetailPage(
-                          strLink: strLinkWeb, strTitle: strTitleWeb))
-                  );
+                      MaterialPageRoute(
+                          builder: (context) => DetailPage(
+                              strLink: strLinkWeb, strTitle: strTitleWeb)));
                 },
                 child: Card(
                     margin: const EdgeInsets.all(10),
                     clipBehavior: Clip.antiAlias,
                     elevation: 0,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)
-                    ),
+                        borderRadius: BorderRadius.circular(10)),
                     color: Colors.white,
                     child: Padding(
                       padding: const EdgeInsets.all(8),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(TimeAgo.setTimeAgo(data.pubDate.toString()),
-                              style: const TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.bold
-                              ),
+                          Text(
+                            TimeAgo.setTimeAgo(data.pubDate.toString()),
+                            style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold),
                           ),
-                          const SizedBox(
-                              height: 20
-                          ),
+                          const SizedBox(height: 20),
                           Row(
                             children: [
                               Flexible(
@@ -83,45 +79,41 @@ class NewsPage extends StatelessWidget {
                                     Text(
                                       data.title.toString(),
                                       style: const TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 16
-                                      ), maxLines: 2,
+                                          color: Colors.black, fontSize: 16),
+                                      maxLines: 2,
                                     ),
                                     const SizedBox(height: 10),
                                     Text(
                                       data.description.toString(),
                                       style: const TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 12
-                                      ), maxLines: 2,
+                                          color: Colors.black, fontSize: 12),
+                                      maxLines: 2,
                                     ),
                                   ],
                                 ),
                               ),
                               Container(
-                                margin: const EdgeInsets.symmetric(horizontal: 10),
+                                margin:
+                                    const EdgeInsets.symmetric(horizontal: 10),
                                 width: 80,
                                 height: 80,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10),
                                   child: SizedBox.fromSize(
                                     size: const Size.fromRadius(20),
-                                    child: Image.network(data.thumbnail.toString(),
-                                        fit: BoxFit.cover
-                                    ),
+                                    child: Image.network(
+                                        data.thumbnail.toString(),
+                                        fit: BoxFit.cover),
                                   ),
                                 ),
                               ),
                             ],
                           ),
-                          const SizedBox(
-                              height: 20
-                          ),
-                          Text(SetDate.setDate(data.pubDate.toString()),
-                              style: const TextStyle(
-                                  color: Colors.grey,
-                                  fontSize: 10
-                              ),
+                          const SizedBox(height: 20),
+                          Text(
+                            SetDate.setDate(data.pubDate.toString()),
+                            style: const TextStyle(
+                                color: Colors.grey, fontSize: 10),
                           )
                         ],
                       ),

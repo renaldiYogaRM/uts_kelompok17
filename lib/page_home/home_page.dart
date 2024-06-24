@@ -8,8 +8,9 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin {
-  String strKategori = 'terbaru', strTitle = "Berita Utama";
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
+  String strKategori = 'terbaru', strTitle = "Berita Terkini - ANTARA News";
   TabController? tabController;
 
   @override
@@ -22,47 +23,47 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           {
             setState(() {
               strKategori = 'terbaru';
-              strTitle = "Berita Utama";
+              strTitle = "Berita Terkini - ANTARA News";
             });
             break;
           }
         case 1:
           {
             setState(() {
-              strKategori = 'lifestyle';
-              strTitle = "Gaya Hidup";
+              strKategori = 'politik';
+              strTitle = "Politik - ANTARA News";
             });
             break;
           }
         case 2:
           {
             setState(() {
-              strKategori = 'techno';
-              strTitle = "Teknologi";
+              strKategori = 'hukum';
+              strTitle = "Hukum - ANTARA News";
             });
             break;
           }
         case 3:
           {
             setState(() {
-              strKategori = 'economy';
-              strTitle = "Bisnis";
+              strKategori = 'ekonomi';
+              strTitle = "Ekonomi - ANTARA News";
             });
             break;
           }
         case 4:
           {
             setState(() {
-              strKategori = 'sports';
-              strTitle = "Olahraga";
+              strKategori = 'bola';
+              strTitle = "Sepakbola - ANTARA News";
             });
             break;
           }
         case 5:
           {
             setState(() {
-              strKategori = 'otomotif';
-              strTitle = "Otomotif";
+              strKategori = 'humaniora';
+              strTitle = "Humaniora - ANTARA News";
             });
             break;
           }
@@ -74,31 +75,30 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:Color.fromARGB(249, 238, 238, 238),
+      backgroundColor: Color.fromARGB(249, 238, 238, 238),
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(249, 238, 238, 238),
-          elevation: 0,
-          title: Row(
-            children: [
-              Image.asset(
-                'assets/logo_umkt.png',
-                width: 40,
-                height: 40,
-                //fit: BoxFit.fill,
-              ),
-              const SizedBox(
-                width: 20,
-              ),
-              Text(
-                strTitle,
-                style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black
-                ),
-              ),
-            ],
-          ),
+        backgroundColor: Color.fromARGB(249, 238, 238, 238),
+        elevation: 0,
+        title: Row(
+          children: [
+            Image.asset(
+              'assets/logo_umkt.png',
+              width: 40,
+              height: 40,
+              //fit: BoxFit.fill,
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            Text(
+              strTitle,
+              style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black),
+            ),
+          ],
+        ),
       ),
       body: Row(
         children: [
